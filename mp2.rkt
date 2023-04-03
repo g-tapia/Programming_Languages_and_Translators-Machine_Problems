@@ -184,26 +184,3 @@
           ;calls helper to handle case of not all number
           (helper-fn exp)))
 
-
-;could have added the cases to cover the symbols but this is too much! Tried mapping the function to cdr but ran into issues
-  (define (helper-fn exp)
-      (cond
-        ;handles expressions of size three
-        [(or (not (list? exp)) (not (= 3 (length exp)))) exp]
-        ;handling of addittion cases for number and zero below (simplifying all cases below)
-        [(and (eq? '+ (first exp)) (and (number? (helper-fn (second exp))) (zero? (helper-fn (second exp))))) (helper-fn (third exp))]
-        [(and (eq? '+ (first exp)) (and (number? (helper-fn (third exp))) (zero? (helper-fn (third exp))))) (helper-fn (second exp))]
-        ;handling both multiplication cases for number and 1 multiplication(simplified)
-        [(and (eq? '* (first exp)) (and (number? (helper-fn (second exp))) (= 1 (helper-fn (second exp)))))  (helper-fn (third exp))]
-        [(and (eq? '* (first exp)) (and (number? (helper-fn (third exp))) (= 1 (helper-fn (third exp))))) (helper-fn (second exp))]
-        ;handling both multiplication cases for number and zero(simplified)
-        [(and (eq? '* (first exp)) (and (number? (helper-fn (second exp))) (zero? (helper-fn (second exp))))) 0]
-        [(and (eq? '* (first exp)) (and (number? (helper-fn (third exp))) (zero? (helper-fn (third exp))))) 0]
-        ;below we handle all cases where the second and third expression is a number
-        [(and (eq? '+ (first exp)) (number? (helper-fn (second exp))) (number? (helper-fn (third exp)))) (+ (helper-fn (second exp)) (helper-fn (third exp)))]
-        [(and (eq? '+ (first exp)) (number? (helper-fn (second exp))) (number? (helper-fn (third exp)))) (+ (helper-fn (second exp)) (helper-fn (third exp)))]
-        [(and (eq? '* (first exp)) (number? (helper-fn (second exp))) (number? (helper-fn (third exp)))) (* (helper-fn (second exp)) (helper-fn (third exp)))]
-        [(and (eq? '* (first exp)) (number? (helper-fn (second exp))) (number? (helper-fn (third exp)))) (* (helper-fn (second exp)) (helper-fn (third exp)))]
-        [else  exp]
-    
-            ))
