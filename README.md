@@ -14,19 +14,19 @@ A step up from the first lab, this one will introduce you to the concept of meta
   The term "metacircular" refers to the cyclic nature of this concept where the implementing language and the implemented language are the same. Metacircular evaluators are an interesting concept because they allow us to understand the semantics of a language from within itself. Building one offers a deep and practical understanding of how language features interact and behave.
 The purpose of a metacircular evaluator is to provide a framework for understanding how an interpreter or compiler works. It allows you to see how the fundamental evaluation processes of a programming language can be implemented using the same language constructs.
 
-Here's a high-level overview of how a metacircular evaluator works:
+#### Here's a high-level overview of how a metacircular evaluator works:
 
-Parsing: The evaluator takes a Racket expression as input and parses it to create an internal representation of the expression called an abstract syntax tree (AST). The AST captures the structure and meaning of the expression.
+**Parsing:** The evaluator takes a Racket expression as input and parses it to create an internal representation of the expression called an abstract syntax tree (AST). The AST captures the structure and meaning of the expression.
 
-Evaluation: The evaluator traverses the AST and evaluates each expression based on the rules of the Racket language. It starts with the outermost expression and recursively evaluates nested expressions.
+**Evaluation:** The evaluator traverses the AST and evaluates each expression based on the rules of the Racket language. It starts with the outermost expression and recursively evaluates nested expressions.
 
-Environment: The evaluator maintains an environment, which is a data structure that keeps track of variables and their corresponding values. When the evaluator encounters a variable in an expression, it looks up the variable's value in the environment.
+**Environment:** The evaluator maintains an environment, which is a data structure that keeps track of variables and their corresponding values. When the evaluator encounters a variable in an expression, it looks up the variable's value in the environment.
 
-Special Forms: The evaluator handles special forms, such as conditionals (if) and function definitions (define). These forms have special evaluation rules that differ from regular function application.
+**Special Forms:** The evaluator handles special forms, such as conditionals (if) and function definitions (define). These forms have special evaluation rules that differ from regular function application.
 
-Function Application: When the evaluator encounters a function call, it evaluates the arguments of the function and then applies the function to those arguments. The evaluation of function calls can be recursive, allowing nested function calls.
+**Function Application:** When the evaluator encounters a function call, it evaluates the arguments of the function and then applies the function to those arguments. The evaluation of function calls can be recursive, allowing nested function calls.
 
-Return Values: The evaluator returns the value of the evaluated expression. This value can be used in further evaluations or displayed as the result of the program.
+**Return Values:** The evaluator returns the value of the evaluated expression. This value can be used in further evaluations or displayed as the result of the program.
 
 The purpose of a metacircular evaluator goes beyond just evaluating expressions. It serves as a tool for understanding the core concepts of a programming language, such as scoping, variable binding, and function application. By implementing an evaluator in the same language it evaluates, you gain insight into how the language itself works and can experiment with modifying its behavior.
 
