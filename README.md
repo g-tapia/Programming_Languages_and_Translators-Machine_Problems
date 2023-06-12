@@ -2,10 +2,10 @@
 Welcome to this Racket repository where you will find three unique lab assignments designed to challenge your understanding and implementation skills of different computing concepts. The labs are as follows:
 
 ## Implementing Library Functions from Scratch (MP1): 
-This lab will give you hands-on experience in reimplementing some common library functions. This will help you understand the underlying mechanism and performance considerations of these functions.
+This lab gave me hands-on experience in reimplementing some common library functions with constraints. This helped me understand the underlying mechanism and performance considerations of these functions.
 
 ## Implementing a Metacircular Evaluator (MP2): 
-A step up from the first lab, this one will introduce you to the concept of metacircular evaluators
+A step up from the first lab, I worked on implementing a metacircular evaluator. For those who don't know what is a meta-circular evaluator, here is a brief description below.
 
 ### Metacircular Evaluator
 
@@ -33,14 +33,16 @@ The purpose of a metacircular evaluator goes beyond just evaluating expressions.
 Metacircular evaluators are often used in educational settings to teach students about programming languages and interpreters. They provide a hands-on approach to understanding the internals of a language and can be a stepping stone to building more advanced language processors like interpreters and compilers.
 
 ## Implementing a Racket Interpreter (MP3): 
-This lab goes a level deeper,building a Racket interpreter. This is a great way to understand how programming languages work at their core.
+This lab goes a level deeper from the previous lab, I was able to build a Racket interpreter. It was a great way to understand how programming languages work at their core. Below,  is a general overview of what an interpreter is.
 
 ### Interpreter
 
-An interpreter is a component of a computer system that directly executes instructions written in a programming or scripting language without requiring them to be previously compiled into a machine language program. In other words, an interpreter translates high-level instructions into an intermediate form, which it then executes.
+An interpreter is a component of a computer system that directly executes instructions written in a programming or scripting language without requiring them to be previously compiled into a machine language program. In other words, an interpreter translates high-level instructions into machine code, which it then executes line-by-line.
 
-Implementing an interpreter involves understanding the structure and syntax of a programming language and being able to parse and execute those instructions. Creating an interpreter gives you an in-depth understanding of a programming language's semantics and the low-level details of its execution model.
+Implementing an interpreter involves understanding the structure and syntax of a programming language and being able to parse and execute those instructions. 
 
-In this repository, the third lab involves creating a simple interpreter for the Racket language. This exercise is a great way to deeply understand how Racket works and will enhance your overall understanding of interpreters and language design.
+Creating an interpreter gives you an in-depth understanding of a programming language's semantics and the low-level details of its execution model.
+
+This exercise was a great way to deeply enhance your overall understanding of interpreters and language design.
 
 
